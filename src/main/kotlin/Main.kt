@@ -2,6 +2,8 @@ fun main()
 {
 
     println("Петя был(а) " + agoToText(38600))
+    println("Миша был(а) " + agoToText(2580))
+    println("Ваня был(а) " + agoToText(1600))
     println("Вася был(а) " + agoToText(30))
     println("Ира был(а) " + agoToText(86401))
 
@@ -13,9 +15,10 @@ fun main()
 fun getRight(count:Int, one:String, two:String, five:String): String
 {
     return when {
-        count % 100 >= 5 && count <= 20 -> five
+        count % 100 in 5..20 -> five
         count % 10 == 1 -> one
-        else -> two
+        count % 10 in 2..4 -> two
+        else -> five
     }
 }
 
