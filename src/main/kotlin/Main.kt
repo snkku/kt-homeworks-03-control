@@ -7,9 +7,10 @@ fun main()
     println("Вася был(а) " + agoToText(30))
     println("Ира был(а) " + agoToText(86401))
 
-    println(calcBribe("MasterCard", 30.0, 250.0))
-    println(calcBribe("MasterCard", 300.0, 75030.0))
-    println(calcBribe("Visa", 0.0, 5000.0))
+    processPayment("MasterCard", 30.0, 151_000.0, 250.0)
+    processPayment("MasterCard", 300.0, monthSum = 75030.0)
+    processPayment("Visa", 0.0, 5000.0)
+    processPayment("VKPay", 50000.0)
 }
 
 fun getRight(count:Int, one:String, two:String, five:String): String
@@ -34,16 +35,39 @@ fun agoToText(seconds:Int): String
     }
 }
 
-fun calcBribe(type: String, lastSum: Double, transferSum: Double): Double {
+fun processPayment(type: String = "VKPay", newSum: Double, dailySum: Double = 0.0, monthSum: Double = 0.0)
+{
+    if (checkLimits(type, newSum, dailySum, monthSum))
+    {
+        println("Платеж на сумму $newSum с типом $type отклонён по причине превышения лимита!")
+        return
+    }
+    val bribe: Double = calcBribe(type, monthSum, newSum)
+    if (bribe > 0.0)
+        println("Комиссия по платежу на $newSum руб с типом $type составляет $bribe руб")
+    else
+        println("Комиссия по платежу на $newSum руб с типом $type отсутствует")
+}
+
+fun checkLimits(type: String = "VKPay", newSum: Double, dailySum: Double = 0.0, monthSum: Double = 0.0): Boolean
+{
+    return when {
+        type == "VKPay" && newSum in 15_000.0 .. 40_000.0 -> false
+        type != "VKPay" && dailySum < 150_000.0 && monthSum < 600_000.0 -> false
+        else -> true
+    }
+}
+
+fun calcBribe(type: String = "VKPay", monthSum: Double = 0.0, newSum: Double): Double {
     return when (type)
     {
         "MasterCard", "Maestro" -> {
-            if (transferSum + lastSum < 75000) 0.0 else transferSum * 0.006 + 20
+            if (newSum >= 300 && monthSum < 75_000) 0.0 else newSum * 0.006 + 20
         }
         "Visa", "Mir" -> {
-            if (transferSum * 0.0075 < 35) 35.0 else transferSum * 0.0075
+            if (newSum * 0.0075 < 35) 35.0 else newSum * 0.0075
         }
         "VKPay" -> 0.0
-        else -> 0.0
+        else -> throw Exception("Неизвестный тип карты")
     }
 }
