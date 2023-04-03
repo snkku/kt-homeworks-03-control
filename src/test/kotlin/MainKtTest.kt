@@ -132,6 +132,16 @@ class MainKtTest {
 
     }
 
+
+    @Test(expected = Exception::class)
+    fun calcBribeException() {
+        val type = "NEVKPay"
+        val newSum = 6_000.0
+        val result = calcBribe(type, newSum = newSum)
+        assertEquals(0, result.toInt())
+
+    }
+
     @Test
     fun agoTextTest1()
     {
