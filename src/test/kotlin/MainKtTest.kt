@@ -126,7 +126,7 @@ class MainKtTest {
     @Test
     fun calcBribeVKPayBribe() {
         val type = "VKPay"
-        val newSum = 5_000.0
+        val newSum = 6_000.0
         val result = calcBribe(type, newSum = newSum)
         assertEquals(0, result.toInt())
     }

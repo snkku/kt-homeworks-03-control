@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cd612a20-cd51-492e-b543-fe98a212c387" name="Changes" comment="поработал Вангой, отправил резюме в ВК, внёс правки :D">
-      <change afterPath="$PROJECT_DIR$/src/test/kotlin/MainKtTest.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+    <list default="true" id="cd612a20-cd51-492e-b543-fe98a212c387" name="Changes" comment="Проверка автотеста (добавил ошибку)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/MainKtTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/MainKtTest.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +17,16 @@
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view />
+      </state>
+    </system>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -143,7 +151,21 @@
       <option name="project" value="LOCAL" />
       <updated>1679377312008</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Добавил автотесты">
+      <created>1680501160215</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1680501160215</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Проверка автотеста (добавил ошибку)">
+      <created>1680501312393</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1680501312393</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -159,6 +181,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="поработал Вангой, отправил резюме в ВК, внёс правки :D" />
-    <option name="LAST_COMMIT_MESSAGE" value="поработал Вангой, отправил резюме в ВК, внёс правки :D" />
+    <MESSAGE value="Добавил автотесты" />
+    <MESSAGE value="Проверка автотеста (добавил ошибку)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Проверка автотеста (добавил ошибку)" />
   </component>
 </project>
