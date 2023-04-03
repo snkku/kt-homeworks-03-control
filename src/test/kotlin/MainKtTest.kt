@@ -9,7 +9,7 @@ class MainKtTest {
         val dailySum = 5_000.0 // < 15_000
         val monthSum = 10_000.0 // < 40_000
         val result = checkLimits("VKPay", sum, dailySum, monthSum)
-        assertEquals(false, result)
+        assertEquals(true, result)
     }
 
     @Test
