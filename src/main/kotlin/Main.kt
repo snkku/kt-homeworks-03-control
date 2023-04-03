@@ -1,5 +1,5 @@
 fun main() {
-
+/*
     println("Петя был(а) " + agoToText(38600))
     println("Миша был(а) " + agoToText(2580))
     println("Ваня был(а) " + agoToText(1600))
@@ -10,7 +10,9 @@ fun main() {
     processPayment("MasterCard", 300.0, monthSum = 75030.0)
     processPayment("Visa", 0.0, 5000.0)
     processPayment("VKPay", 50000.0)
+*/
 }
+
 
 fun getRight(count: Int, one: String, two: String, five: String): String {
     return when {
@@ -44,6 +46,7 @@ fun agoToText(seconds: Int): String {
     }
 }
 
+/*
 fun processPayment(type: String = "VKPay", newSum: Double, dailySum: Double = 0.0, monthSum: Double = 0.0) {
     if (checkLimits(type, newSum, dailySum, monthSum)) {
         println("Платеж на сумму $newSum с типом $type отклонён по причине превышения лимита!")
@@ -55,6 +58,7 @@ fun processPayment(type: String = "VKPay", newSum: Double, dailySum: Double = 0.
     else
         println("Комиссия по платежу на $newSum руб с типом $type отсутствует")
 }
+*/
 
 fun checkLimits(type: String = "VKPay", newSum: Double, dailySum: Double = 0.0, monthSum: Double = 0.0): Boolean {
     return when {

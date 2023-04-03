@@ -129,6 +129,52 @@ class MainKtTest {
         val newSum = 6_000.0
         val result = calcBribe(type, newSum = newSum)
         assertEquals(0, result.toInt())
+
+    }
+
+    @Test
+    fun agoTextTest1()
+    {
+        val int = 10
+        val result = agoToText(int)
+        assertEquals("только что", result)
+    }
+    @Test
+    fun agoTextTest2()
+    {
+        val int = 120
+        val result = agoToText(int)
+        assertEquals("2 минуты назад", result)
+    }
+    @Test
+    fun agoTextTest3()
+    {
+        val int = 60*60*2
+        val result = agoToText(int)
+        assertEquals("2 часа назад", result)
+    }
+
+    @Test
+    fun agoTextTest4()
+    {
+        val int = 60 * 60 * 25
+        val result = agoToText(int)
+        assertEquals("вчера", result)
+    }
+    @Test
+    fun agoTextTest5()
+    {
+        val int = 60 * 60 * 48 + 1
+        val result = agoToText(int)
+        assertEquals("позавчера", result)
+    }
+
+    @Test
+    fun agoTextTest6()
+    {
+        val int = 60 * 60 * 24 * 5
+        val result = agoToText(int)
+        assertEquals("давно", result)
     }
 
 }

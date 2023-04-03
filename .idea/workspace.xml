@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cd612a20-cd51-492e-b543-fe98a212c387" name="Changes" comment="Проверка автотеста (добавил ошибку)">
+    <list default="true" id="cd612a20-cd51-492e-b543-fe98a212c387" name="Changes" comment="Проверка автотеста (проверка репортов jacoco)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/kotlin/MainKtTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/MainKtTest.kt" afterDir="false" />
     </list>
@@ -165,7 +165,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680501312393</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Проверка автотеста (проверка репортов jacoco)">
+      <created>1680504197130</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1680504197130</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -183,6 +190,7 @@
     <MESSAGE value="поработал Вангой, отправил резюме в ВК, внёс правки :D" />
     <MESSAGE value="Добавил автотесты" />
     <MESSAGE value="Проверка автотеста (добавил ошибку)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Проверка автотеста (добавил ошибку)" />
+    <MESSAGE value="Проверка автотеста (проверка репортов jacoco)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Проверка автотеста (проверка репортов jacoco)" />
   </component>
 </project>
